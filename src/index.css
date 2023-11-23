@@ -1,13 +1,154 @@
 body {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.maincontent {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container  {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.container button {
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #0b67a4;
+}
+
+p {
+  text-align: center;
+  color: #555;
+}
+
+.firstName,
+.lastName{
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+#fname,
+#lname{
+  display: block;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+.modalbtn{
+  /* display: block; */
+  margin: 100%;
+  margin-bottom: 10px;
+  margin-left: 85px;
+}
+
+.accordionbtn {
+  background-color: #0b67a4;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+.submitbtn,
+.modalbtn,
+.resetbtn{
+  background-color: #0b67a4;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  text-align: center;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 60px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.closebtn{
+  background-color: #0b67a4;
+  color: #fff;
+  padding: 10px;
+  margin-left: 100%;
+  margin-bottom: 25%;
+}
+
+.modalsubmitbtn{
+  background-color: #0b67a4;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10%;
+}
+
+#email{
+  display: block;
+  /* margin: 10px; */
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.mailinput{
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.modaldailog{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9f9f9f;
+}
+
+
+.secondmodalbtn{
+  /* display: block; */
+  /* margin: 100%; */
+  background-color: #0b67a4;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-left: 45px;
 }
