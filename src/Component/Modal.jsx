@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState }  from 'react'
 import "./Modal"
 
 
-const Modal = ({onHideModal}) => {
+const Modal = ({onHideModal, onClickOpenSecondModal}) => {
   const modalElement = useRef(null);
   const emailError = useRef(null);
   const [email, setEmail] = useState('');
@@ -102,7 +102,7 @@ return (
           </div>
           <div>
             <button className='modalsubmitbtn' type='submit' onClick={onSubmit}>Submit</button>
-            <button className='secondmodalbtn'>Modal</button>
+            <button className='secondmodalbtn' onClick={onClickOpenSecondModal}>Modal</button>
           </div>
         </div>
     </>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Form from './Form';
 import Modal from './Modal';
+import SecondModal from './SecondModal';
 
 
 
@@ -12,7 +13,7 @@ const MyAccordion = () => {
     const [newEnable, setNewEnable] = useState(false);  // show/hide condition for 3rd accordion
     const [expanded, setExpanded] = useState(false); // aria Expand/Collapse
     const [openModal, setOpenModal] = useState(true);
-
+    const [openSecondModal, setOpenSecondModal] = useState(true);
     
     const handleClick = (index) => {
         // Accordian expand/collase hide/show
@@ -90,6 +91,21 @@ const MyAccordion = () => {
             
         };
 
+        //Second modal open
+        const onClickOpenSecondModal= ()=>{
+            setOpenSecondModal(false);
+            
+        }
+        //Close Second Modal
+        const secondModalReturnFocus= useRef(null);
+        
+        const onHideSecondModal= ()=>{
+            setOpenSecondModal(true);
+            
+            secondModalReturnFocus.current.focus();
+            
+        };
+
 
     return (
         <>
@@ -117,8 +133,13 @@ const MyAccordion = () => {
             
             {/* Modal Dailoge */}
             <div class='modal' hidden={openModal}>
-            <Modal onHideModal={onHideModal} />
+            <Modal onHideModal={onHideModal} onClickOpenSecondModal={onClickOpenSecondModal} />
             </div>
+
+            <div class='secondmodal' hidden={openSecondModal}>
+            <SecondModal onHideSecondModal={onHideSecondModal} />
+            </div>
+
 
             {/* 3rd accordion */}
             <div>
